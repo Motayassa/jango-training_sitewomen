@@ -7,5 +7,5 @@ def index(request):  # request это ссылка на класс HttpRequest
     # Формирует загодовок и содержимое ответа
 
 
-def categories(request):
-    return HttpResponse("<h1>Статьи по категориям</h2>")
+def categories(request, cat_id):
+    return HttpResponse(f"<h1>Статьи по категориям</h1><p>id: {cat_id}</p>")
