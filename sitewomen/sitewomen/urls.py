@@ -20,7 +20,7 @@ from women.views import index, categories
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('women/', index),  # http://127.0.0.1:8000/women/
+    path('', index),  # http://127.0.0.1:8000
     # Добавили url-адрес, ссылающийся на функцию index в women/views.py
     path('cat/', categories),  # http://127.0.0.1:8000/cat/
 ]
