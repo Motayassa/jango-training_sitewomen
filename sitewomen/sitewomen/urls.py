@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from women.views import index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('women/', index),  # http://127.0.0.1:8000/women/
+    # Добавили url-адрес, ссылающийся на функцию index в women/views.py
 ]
