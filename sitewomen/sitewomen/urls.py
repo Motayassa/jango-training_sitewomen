@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from women.views import index, categories
+from women import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', index),  # http://127.0.0.1:8000
+    path('', views.index),  # http://127.0.0.1:8000
     # Добавили url-адрес, ссылающийся на функцию index в women/views.py
-    path('cat/', categories),  # http://127.0.0.1:8000/cat/
+    path('cats/', views.categories),  # http://127.0.0.1:8000/cat/
 ]
