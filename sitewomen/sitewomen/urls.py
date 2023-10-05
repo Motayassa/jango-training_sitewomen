@@ -20,7 +20,8 @@ from women import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', include('women.urls')),  # http://127.0.0.1:8000
+    path('women/', include('women.urls')),  # суффикс women/ добавится ко всем
+    # адресам из 'women.urls'
     # Подключили функцию include для упрощения
-    # потенциального переноса приложения переноса 
+    # потенциального переноса приложения переноса
 ]
