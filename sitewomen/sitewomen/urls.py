@@ -22,5 +22,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.index),  # http://127.0.0.1:8000
     # Добавили url-адрес, ссылающийся на функцию index в women/views.py
-    path('cats/', views.categories),  # http://127.0.0.1:8000/cat/
+    path('cats/', views.categories),  # http://127.0.0.1:8000/cats/
 ]
