@@ -1,4 +1,4 @@
-from django.urls import path, re_path, register_converter
+from django.urls import path, register_converter
 from . import views
 from . import converters
 
@@ -13,5 +13,6 @@ urlpatterns = [
     # http://127.0.0.1:8000/cats/2fevnejvbqeo/
     # re_path(r"^archive/(?P<year>[0-9]{4})/", views.archive)
     # регулярка, четырехзначный год
-    
+    path("archive/<year4:year>/", views.archive)
+    # использование самодельного конвертера
 ]
