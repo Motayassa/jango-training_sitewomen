@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 
 def index(request):  # request это ссылка на класс HttpRequest
+    # через request можно получать GET и POST коллекции
     return HttpResponse("Страница приложения women.")
     # Формирует загодовок и содержимое ответа
 
