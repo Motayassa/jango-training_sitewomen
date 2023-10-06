@@ -12,6 +12,8 @@ def categories(request, cat_id):
 
 
 def categories_by_slug(request, cat_slug):
+    if request.GET:  # Выделение спец параметров из GET-запроса.
+        print(request.GET)
     return HttpResponse(f"<h1>Статьи по категориям</h1><p>slug: {cat_slug}</p>")
 
 
