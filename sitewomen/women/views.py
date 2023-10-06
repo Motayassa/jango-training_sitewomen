@@ -20,7 +20,7 @@ def categories_by_slug(request, cat_slug):
 
 def archive(request, year):
     if year > 2023:
-        return redirect('/')  # Перенаправление на главную стр
+        return redirect('/', permanent=True)  # Перенаправление постоянное на главную стр
     return HttpResponse(f"<h1>Архив по годам</h1><p>{year}</p>")
 
 
