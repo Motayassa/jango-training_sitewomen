@@ -1,4 +1,4 @@
-from django.http import Http404, HttpResponse, HttpResponseNotFound
+from django.http import Http404, HttpResponse, HttpResponseNotFound, HttpResponsePermanentRedirect, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
@@ -21,12 +21,13 @@ def categories_by_slug(request, cat_slug):
 
 def archive(request, year):
     if year > 2023:
-        uri = reverse('cats', args=('music', ))  # возвращает uri  c параметрами
-        return redirect(uri)
+        uri = reverse('cats', args=('sport', ))  # возвращает uri  c параметрами
+        return HttpResponsePermanentRedirect(uri)
         # Перенаправление постоянное на главную стр
         # Можно использовать представления или имена
         # маршрутов в первом аргументе, вместо адреса
         # Возможно добавление аргументов
+        # Возможно использование классов
     return HttpResponse(f"<h1>Архив по годам</h1><p>{year}</p>")
 
 
