@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from women.views import page_not_found
 from women import views
 
 urlpatterns = [
@@ -24,3 +25,7 @@ urlpatterns = [
     # Подключили функцию include для упрощения
     # потенциального переноса приложения переноса
 ]
+
+
+handler404 = page_not_found  # обработчик будет срабатывать
+# при ошибке 404, ссылается на функцию представления
