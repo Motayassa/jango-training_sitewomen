@@ -1,5 +1,6 @@
 from django.http import Http404, HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect, render
+from django.urls import reverse
 
 
 def index(request):  # request это ссылка на класс HttpRequest
@@ -20,7 +21,8 @@ def categories_by_slug(request, cat_slug):
 
 def archive(request, year):
     if year > 2023:
-        return redirect('cats', 'music')
+        uri = reverse('cats', args=('music', ))  # возвращает uri  c параметрами
+        return redirect(uri)
         # Перенаправление постоянное на главную стр
         # Можно использовать представления или имена
         # маршрутов в первом аргументе, вместо адреса
