@@ -1,11 +1,13 @@
 from django.http import Http404, HttpResponse, HttpResponseNotFound, HttpResponsePermanentRedirect, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
+from django.template.loader import render_to_string
 
 
 def index(request):  # request это ссылка на класс HttpRequest
     # через request можно получать GET и POST коллекции
-    return HttpResponse("Страница приложения women.")
+    t = render_to_string('путь к шаблону index.html')
+    return HttpResponse(t)
     # Формирует загодовок и содержимое ответа
 
 
