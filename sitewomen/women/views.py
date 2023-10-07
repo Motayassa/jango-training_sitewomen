@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 
 def index(request):  # request это ссылка на класс HttpRequest
     # через request можно получать GET и POST коллекции
-    t = render_to_string('index.html')
+    t = render_to_string('women/index.html')
     return HttpResponse(t)
     # Формирует загодовок и содержимое ответа
 
