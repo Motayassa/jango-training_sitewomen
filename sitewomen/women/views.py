@@ -4,17 +4,24 @@ from django.urls import reverse
 from django.template.loader import render_to_string
 
 
+menu = ["О сайте", "Добавить статью", "Обратная связь", "Войти"]
+
+
 def index(request):  # request это ссылка на класс HttpRequest
     # через request можно получать GET и POST коллекции
     #   t = render_to_string('women/index.html')
     # отрисовка шаблона на который ведет ссылка
     #   return HttpResponse(t)
     # Формирует загодовок и содержимое ответа
-    return render(request, 'women/index.html')  # заменяет верхние две строки
+    data = {
+        'title': 'Главная страница',
+        'menu': menu,
+            }
+    return render(request, 'women/index.html', context=data)  # заменяет верхние две строки
 
 
 def about(request):
-    return render(request, "women/about.html")
+    return render(request, "women/about.html", {'title': 'О сайте'})
 
 
 def categories(request, cat_id):
