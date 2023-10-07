@@ -6,10 +6,11 @@ from django.template.loader import render_to_string
 
 def index(request):  # request это ссылка на класс HttpRequest
     # через request можно получать GET и POST коллекции
-    t = render_to_string('women/index.html')
+    #   t = render_to_string('women/index.html')
     # отрисовка шаблона на который ведет ссылка
-    return HttpResponse(t)
+    #   return HttpResponse(t)
     # Формирует загодовок и содержимое ответа
+    return render(request, 'women/index.html')  # заменяет верхние две строки
 
 
 def categories(request, cat_id):
