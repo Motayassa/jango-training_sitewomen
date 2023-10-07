@@ -13,6 +13,10 @@ def index(request):  # request это ссылка на класс HttpRequest
     return render(request, 'women/index.html')  # заменяет верхние две строки
 
 
+def about(request):
+    return render(request, "women/about.html")
+
+
 def categories(request, cat_id):
     return HttpResponse(f"<h1>Статьи по категориям</h1><p>id: {cat_id}</p>")
 
