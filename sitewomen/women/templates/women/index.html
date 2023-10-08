@@ -2,11 +2,7 @@
 {% block content %}
 <h1>{{ title }}</h1>
 
-<nav>
-    <a href='#'>Актрисы</a> |
-    <a href='#'>Певицы</a> |
-    <a href='#'>Спортсменки</a>
-</nav>
+{% include 'women/includes/nav.html' only %}
 
 <ul>
     {% for p in posts %}
@@ -23,11 +19,7 @@
     {% endfor %}
 </ul>
 
-<nav>
-    <a href='#'>Актрисы</a> |
-    <a href='#'>Певицы</a> |
-    <a href='#'>Спортсменки</a>
-</nav>
+{% include 'women/includes/nav.html' %}
 
 {% endblock %}
 </body>
