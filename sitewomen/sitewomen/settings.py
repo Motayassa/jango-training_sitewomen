@@ -55,7 +55,9 @@ ROOT_URLCONF = "sitewomen.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],  # для нестандартных путей до шаблонов
+        "DIRS": [
+            BASE_DIR / 'templates',
+            ],  # для нестандартных путей до шаблонов
         #  BASE_DIR / 'women' / 'templates'
         "APP_DIRS": True,  # включает поиск в каталогах templates
         # для этого приложение должно быть инсталировано в intalled apps
