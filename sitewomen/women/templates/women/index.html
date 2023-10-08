@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title|default:"Без заголовка" }}</title>
-</head>
-<body>
-<ul>
-    <li><a href="{% url 'home' %}">Главная страница</a></li>
-    {% for m in menu %}
-    {% if not forloop.last %}<li>{% else %}<li class="last">{% endif %}
-        <a href="{% url m.url_name %}">{{ m.title }}</a>
-    </li>    
-    {% endfor %}
-</ul>
-<h1>{{ title|capfirst|cut:"?" }}</h1> {# upper, lower #}
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ title }}</h1>
+
+<nav>
+    <a href='#'>Актрисы</a> |
+    <a href='#'>Певицы</a> |
+    <a href='#'>Спортсменки</a>
+</nav>
 
 <ul>
     {% for p in posts %}
@@ -28,5 +22,13 @@
     {% endif %}
     {% endfor %}
 </ul>
+
+<nav>
+    <a href='#'>Актрисы</a> |
+    <a href='#'>Певицы</a> |
+    <a href='#'>Спортсменки</a>
+</nav>
+
+{% endblock %}
 </body>
 </html>
