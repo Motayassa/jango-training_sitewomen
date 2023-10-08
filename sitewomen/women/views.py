@@ -5,7 +5,12 @@ from django.template.loader import render_to_string
 from django.template.defaultfilters import slugify 
 
 
-menu = ["О сайте", "Добавить статью", "Обратная связь", "Войти"]
+menu = [
+    {'title': "О сайте", 'url_name': 'about'},
+    {'title': "Добавить статью", 'url_name': 'add_page'},
+    {'title': "Обратная связь", 'url_name': 'contact'},
+    {'title': "Войти", 'url_name': 'login'},
+]
 
 
 data_db = [
