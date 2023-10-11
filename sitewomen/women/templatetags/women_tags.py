@@ -3,6 +3,7 @@ import women.views as views
 
 register = template.Library()
 
-@register.simple_tag()  # создание простого тега
+
+@register.simple_tag(name='getcats')  # создание простого тега
 def get_categories():
     return views.cats_db
