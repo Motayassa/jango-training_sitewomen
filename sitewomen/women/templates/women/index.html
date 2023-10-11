@@ -5,7 +5,7 @@
 	{% for p in posts %}
 	{% if p.is_published %}
 			<li><h2>{{p.title}}</h2>
-	{{p.content|truncatewords:50}}
+	{{p.content|truncatewords:20}}
 			<div class="clear"></div>
 			<p class="link-read-post"><a href="{% url 'post' p.id %}">Читать пост</a></p>
 			</li>
