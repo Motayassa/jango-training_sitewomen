@@ -32,7 +32,7 @@
 <!-- Sidebar слева -->
 	<td valign="top" class="left-chapters">
 	<ul id="leftchapters">
-		{% get_categories as categories %}  {# Данные тега шаблона помещаются в переменную #}
+		{% getcats as categories %}  {# Данные тега шаблона помещаются в переменную #}
 		<li class="selected">Все категории</li>
 
 		{% for cat in categories %}
