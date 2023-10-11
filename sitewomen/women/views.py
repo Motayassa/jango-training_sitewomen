@@ -39,6 +39,7 @@ def index(request):  # request это ссылка на класс HttpRequest
         'title': 'главная страница',
         'menu': menu,
         'posts': data_db,
+        'cat_selected': 0,
             }
     return render(request, 'women/index.html', context=data)  # заменяет верхние две строки
 
@@ -64,7 +65,13 @@ def login(request):
 
 
 def show_category(request, cat_id):
-    return index(request)
+    data = {
+        'title': 'отображение по рубрикам',
+        'menu': menu,
+        'posts': data_db,
+        'cat_selected': cat_id,
+        }
+    return render(request, 'women/index.html', context=data)
 
 
 def page_not_found(request, exception):
