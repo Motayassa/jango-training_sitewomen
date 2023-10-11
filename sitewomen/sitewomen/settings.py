@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"  # префикс для всех статических файлов в html документах
+# STATICFILES_DIRS = [BASE_DIR / 'sitewomen/static']  # Нестандартный путь для статик-файлов
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
