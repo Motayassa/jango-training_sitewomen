@@ -34,9 +34,9 @@
 	<ul id="leftchapters">
 		{% get_categories as categories %}  {# Данные тега шаблона помещаются в переменную #}
 		<li class="selected">Все категории</li>
-		
+
 		{% for cat in categories %}
-		<li><a href="#">{{cat.name}}</a></li>
+		<li><a href="{% url 'category' cat.id %}">{{cat.name}}</a></li>
 		{% endfor %}
 
 		<li class="share">
