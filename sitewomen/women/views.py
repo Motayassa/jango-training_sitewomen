@@ -22,6 +22,13 @@ data_db = [
 ]
 
 
+cats_db = [
+    {'id': 1, 'name': 'Актрисы'},
+    {'id': 2, 'name': 'Певицы'},
+    {'id': 3, 'name': 'Спортсменки'},
+]
+
+
 def index(request):  # request это ссылка на класс HttpRequest
     # через request можно получать GET и POST коллекции
     #   t = render_to_string('women/index.html')
