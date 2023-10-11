@@ -1,4 +1,4 @@
-from django import templatetags
+from django import template
 import women.views as views
 
 register = template.Library()
