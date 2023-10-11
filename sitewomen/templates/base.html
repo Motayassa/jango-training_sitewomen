@@ -32,11 +32,13 @@
 <!-- Sidebar слева -->
 	<td valign="top" class="left-chapters">
 	<ul id="leftchapters">
-		{% get_categories %}
+		{% get_categories as categories %}  {# Данные тега шаблона помещаются в переменную #}
 		<li class="selected">Все категории</li>
-		<li><a href="#">Актрисы</a></li>
-		<li><a href="#">Певицы</a></li>
-		<li><a href="#">Спортсменки</a></li>
+		
+		{% for cat in categories %}
+		<li><a href="#">{{cat.name}}</a></li>
+		{% endfor %}
+
 		<li class="share">
 		<p>Наш канал</p>
 		<a class="share-yt" href="https://www.youtube.com/channel/UClJzWfGWuGJL2t-3dYKcHTA/playlists" target="_blank" rel="nofollow"></a>
